@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+
+}
+
+body {
+    background-color: #f3eae3;
+
+}
+
+.parent {
+    width: calc(100%/2.5);
+    height: 60%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    overflow: hidden;
+}
+
+.imagecontainer {
+    height: 100%;
+    position: relative;
+    /* grid-area: 1 / 1 / 3/ 3; */
+
+
+}
+
+.imagecontainer .desktop {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+}
+
+.imagecontainer .mobile {
+    display: none;
+}
+
+.category {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    opacity: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: transparent;
+}
+
+button img {
+    width: 20px;
+    height: 20px;
+}
+
+.otherside {
+    /* grid-area: 3 / 3 / 5 / 5; */
+    padding: 30px;
+    position: relative;
+    height: 100%;
+
+}
+
+.mine {
+    font-family: initial;
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+.otherside p:nth-of-type(2) {
+    opacity: 50%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.discount {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.discount h2 {
+    color: #3e7d65;
+    margin: 0;
+    font-size: 35px;
+    margin-right: 50px;
+    /* font-family: "Fraunces", serif; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.discount {
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.discount span {
+    opacity: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 45px;
+    text-align: center;
+    background-color: #2b6751;
+    color: white;
+    font-weight: bold;
+    border-style: none;
+}
+
+button span {
+    margin-left: 5px;
+}
+
+button:active {
+    background-color: #1c4334;
+    cursor: pointer;
+}
+
+@media (max-width:391px) {
+    .parent {
+        width: 90%;
+        /* display: grid;
+        grid-template-columns: 1, 1fr;
+        grid-template-rows: auto auto; */
+        display: flex;
+        height: auto;
+        flex-wrap: wrap;
+
+    }
+
+    .imagecontainer {
+        width: 100%;
+    }
+
+    .imagecontainer .desktop {
+        display: none;
+    }
+
+    .imagecontainer .mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .otherside p:nth-of-type(2) {
+        font-weight: initial;
+        font-size: 15.5px;
+    }
+
+    .otherside .mine {
+        font-size: 31px;
+        font-weight: bold;
+    }
+
+    .discount {
+        margin-bottom: 10px;
+    }
+
+    .discount h2 {
+        margin-right: 20px;
+    }
+}
